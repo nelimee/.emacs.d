@@ -50,4 +50,4 @@
 (load "config-latex.el")
 (load "config-powerthesaurus.el")
 (load "config-smartparens.el")
-(load "config-flycheck.el")
+;; (load "config-flycheck.el")
