@@ -6,6 +6,10 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                             Fonts and encoding                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (prefer-coding-system 'utf-8)
 ;; Set default font
 (set-face-attribute 'default nil

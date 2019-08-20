@@ -1,8 +1,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                   DEBUG                                    ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (setq debug-on-error t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                             Garbage collector                              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Make startup faster by reducing the frequency of garbage
+;; collection.  The default is 800 kilobytes.  Measured in bytes.
+(setq gc-cons-threshold (* 10 1000 1000))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                straight.el                                 ;;
@@ -12,6 +18,10 @@
 ;; use-package does not need ":straight" as it is now by default.
 ;; Use ":straight nil" to override locally.
 (setq straight-use-package-by-default t)
+;; Avoid the utilisation of find(1) to check for modified packages. Use
+;; a more lazy approach.
+;; See https://github.com/raxod502/straight.el/blob/master/README.md#customizing-when-packages-are-built
+(setq straight-check-for-modifications '(check-on-save))
 ;; From https://github.com/raxod502/straight.el#getting-started
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -51,3 +61,10 @@
 (load "config-powerthesaurus.el")
 (load "config-smartparens.el")
 ;; (load "config-flycheck.el")
+(load "config-esup.el")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                             Garbage collector                              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Make gc pauses faster by decreasing the threshold.
+(setq gc-cons-threshold (* 2 1000 1000))
