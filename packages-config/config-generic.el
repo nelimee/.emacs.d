@@ -14,7 +14,15 @@
                     :weight 'normal
                     :width 'normal)
 
+;; Maximise Emacs on startup
+;; From https://emacs.stackexchange.com/a/3008
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; Sometimes emacs asks us to write 'yes' or 'no'. This is too long.
+;; Change it to one press on the keys 'y' or 'n'.
 (fset 'yes-or-no-p 'y-or-n-p)
+;; Prevent Extraneous Tabs
+;; See https://www.gnu.org/software/emacs/manual/html_node/eintr/Indent-Tabs-Mode.html
 (setq-default indent-tabs-mode nil)
 
 ;; Emacs backups and auto-save files
