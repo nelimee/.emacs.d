@@ -61,6 +61,7 @@
 (load "config-powerthesaurus.el")
 (load "config-smartparens.el")
 ;; (load "config-flycheck.el")
+(load "config-ispell.el")
 (load "config-esup.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
