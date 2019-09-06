@@ -57,6 +57,7 @@
 (load "config-generic.el")
 (load "config-theme.el")
 (load "config-git.el")
+(load "config-org.el")
 (load "config-latex.el")
 (load "config-powerthesaurus.el")
 (load "config-smartparens.el")
