@@ -16,4 +16,14 @@
   ;; From https://www.gnu.org/software/auctex/manual/auctex/Folding.html
   (add-hook 'LaTeX-mode-hook (lambda ()
                                (TeX-fold-mode 1)))
+  ;; to use pdfview with auctex
+  ;; From https://emacs.stackexchange.com/a/21764
+  (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
+        TeX-view-program-list '(("PDF Tools" TeX-pdf-tools-sync-view))
+        TeX-source-correlate-start-server t) ;; not sure if last line is neccessary
+  )
+
+(use-package pdf-tools
+  :config
+  (pdf-tools-install)
   )
