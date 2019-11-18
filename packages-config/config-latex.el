@@ -16,6 +16,9 @@
   ;; From https://www.gnu.org/software/auctex/manual/auctex/Folding.html
   (add-hook 'LaTeX-mode-hook (lambda ()
                                (TeX-fold-mode 1)))
+  ;; Refresh the PDFView buffer after compilation
+  (add-hook 'TeX-after-compilation-finished-functions
+            #'TeX-revert-document-buffer)
   ;; to use pdfview with auctex
   ;; From https://emacs.stackexchange.com/a/21764
   (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
