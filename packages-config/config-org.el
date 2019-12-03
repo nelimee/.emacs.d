@@ -4,12 +4,12 @@
   (setq org-capture-templates
         '(
           ("m" "Meeting note"
-           entry (file+olp+datetree "~/.org-files/meetings.org")
+           entry (file+olp+datetree "~/thesis/.org-files/meetings.org")
            "* %^{Meeting title} (%<%H:%M>)\n** Participants\n 1. %?\n** Notes\n"
            :empty-lines 1)
 
           ("j" "Journal entry"
-           entry (file+olp+datetree "~/.org-files/journal.org")
+           entry (file+olp+datetree "~/thesis/.org-files/journal.org")
            "* %^{Entry title} (%<%H:%M>)\n\n %?"
            :empty-lines 1)
           )
