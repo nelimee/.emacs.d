@@ -20,7 +20,9 @@
 
 ;; Maximise Emacs on startup
 ;; From https://emacs.stackexchange.com/a/3008
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; The second line works better on my OS, so I keep only the second one.
+;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(toggle-frame-maximized)
 
 ;; Sometimes emacs asks us to write 'yes' or 'no'. This is too long.
 ;; Change it to one press on the keys 'y' or 'n'.
@@ -53,3 +55,8 @@
 (line-number-mode t)
 (column-number-mode 1)
 (size-indication-mode t)
+
+
+(setq c-basic-offset 4)
+(setq tab-width 4)
+(setq-default indent-tabs-mode nil)

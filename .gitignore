@@ -75,3 +75,8 @@ request
 savehist
 straight
 transient
+snippets
+recentf
+projectile-bookmarks.eld
+.cache
+.lsp-session*

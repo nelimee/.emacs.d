@@ -1,6 +1,5 @@
 (use-package tex-site
   :straight auctex
-  :init
   :config
   ;; Activate nice interface between RefTeX and AUCTeX
   (setq reftex-plug-into-AUCTeX t)
@@ -24,6 +23,7 @@
   (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
         TeX-view-program-list '(("PDF Tools" TeX-pdf-tools-sync-view))
         TeX-source-correlate-start-server t) ;; not sure if last line is neccessary
+  (with-eval-after-load "flycheck" (flycheck-add-next-checker 'tex-chktex 'textlint))
   )
 
 (use-package pdf-tools
