@@ -4,6 +4,8 @@
   (setq projectile-project-search-path '("~/projects/"
                                          "~/thesis/total/repositories/"
                                          "~/PycharmProjects/"
+                                         "~/thesis/papers/"
+                                         "~/thesis/presentations/"
                                          )
         )
   :config

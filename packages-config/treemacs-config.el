@@ -7,7 +7,7 @@
     (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?))
   :bind
   (("C-c n" . treemacs)
-   ("C-c b" . treemacs-select-window))
+   ("C-c m" . treemacs-select-window))
 )
 
 (use-package treemacs-projectile

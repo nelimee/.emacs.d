@@ -75,6 +75,8 @@
 (load "ace-window-config.el")                 ;; Window management
 (load "fill-column-indicator-config.el")      ;; Window management
 (load "yasnippet-config.el")                  ;; Automatic expansion
+(load "highlight-indent-guide-config.el")
+(load "flx-config.el")                        ;; Fuzzy matching engine
 
 ;; Developement environments
 (load "lsp-config.el")
@@ -83,14 +85,15 @@
 (load "c++-config.el")             ;; C++ language mode
 (load "cmake-config.el")           ;; CMake language mode
 ;; Docker
-;; (load "docker-compose-config.el")  ;; docker-compose language mode
-;; (load "dockerfile-config.el")      ;; dockerfile language mode
+(load "docker-compose-config.el")  ;; docker-compose language mode
+(load "dockerfile-config.el")      ;; dockerfile language mode
 ;; Others
 (load "git-config.el")
 (load "org-config.el")
 (load "latex-config.el")
 ;; (load "python-config.el")
-;; (load "markdown-config.el")
+(load "markdown-config.el")
+(load "yaml-config.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Garbage collector                              ;;
