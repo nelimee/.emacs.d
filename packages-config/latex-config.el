@@ -1,4 +1,5 @@
 (use-package tex-site
+  :defer t
   :straight auctex
   :config
   ;; Activate nice interface between RefTeX and AUCTeX
@@ -9,6 +10,8 @@
   (setq reftex-label-alist '(AMSTeX))
   ;; From https://tex.stackexchange.com/questions/139824/disabling-the-select-reference-format-menu-in-reftex
   (setq reftex-ref-macro-prompt nil)
+  ;; From https://www.gnu.org/software/emacs/manual/html_node/reftex/Reference-Styles.html
+  (setq reftex-ref-style-default-list '("Hyperref"))
   ;; Turn on RefTeX in AUCTeX
   (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
   ;; Turn on folding
@@ -27,6 +30,7 @@
   )
 
 (use-package pdf-tools
+  :defer t
   :config
   (pdf-tools-install)
   )

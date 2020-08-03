@@ -78,5 +78,6 @@ transient
 snippets
 recentf
 projectile-bookmarks.eld
+bookmarks
 .cache
 .lsp-session*

@@ -30,6 +30,12 @@
 ;; Prevent Extraneous Tabs
 ;; See https://www.gnu.org/software/emacs/manual/html_node/eintr/Indent-Tabs-Mode.html
 (setq-default indent-tabs-mode nil)
+;; Lines that does not fit into the screen will be **visually** (not in the real file)
+;; truncated.
+;; See first comment at https://stackoverflow.com/a/3282132/4810787
+(setq-default truncate-lines nil)
+(setq-default truncate-partial-width-windows nil)
+(setq-default word-wrap t)
 
 ;; Emacs backups and auto-save files
 ;; keep backup files forever, in a separate directory, and version them

@@ -2,10 +2,10 @@
   :init
   ;; Set some paths where projectile should search for projects
   (setq projectile-project-search-path '("~/projects/"
-                                         "~/thesis/total/repositories/"
-                                         "~/PycharmProjects/"
+                                         ;; "~/thesis/total/repositories/"
+                                         ;; "~/PycharmProjects/"
                                          "~/thesis/papers/"
-                                         "~/thesis/presentations/"
+                                         ;; "~/thesis/presentations/"
                                          )
         )
   :config
@@ -14,11 +14,5 @@
   ;; and use hybrid mode instead.
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-sort-order 'recentf)
-  (setq projectile-completion-system 'ivy)
   (projectile-mode +1)
-  )
-
-(use-package counsel-projectile
-  :config
-  (counsel-projectile-mode 1)
   )

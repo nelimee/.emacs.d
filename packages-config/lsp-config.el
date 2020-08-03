@@ -9,12 +9,6 @@
   ;; Do not enable the formatters to let pyls use Black!
   (setq lsp-pyls-plugins-autopep8-enabled nil)
   (setq lsp-pyls-plugins-yapf-enabled nil)
-  ;; See https://github.com/emacs-lsp/lsp-mode#faq
-  ;; (add-hook 'hack-local-variables-hook
-  ;;           (lambda () (when (derived-mode-p 'python-mode) (lsp))))
-  ;; ;; See https://www.gnu.org/software/emacs/manual/html_node/emacs/Safe-File-Variables.html#Safe-File-Variables
-  ;; (add-to-list 'safe-local-variable-values
-  ;;              '(lsp-pyls-server-command . "~/.anaconda3/envs/ibmq_data_visualisation/bin/python"))
   ;; Arguments given to clangd server. See https://emacs-lsp.github.io/lsp-mode/lsp-mode.html#lsp-clangd
   (setq lsp-clients-clangd-args '(
                                   ;; If set to true, code completion will include index symbols that are not defined in the scopes
@@ -63,10 +57,10 @@
   :commands lsp
   )
 
-;; optionally
 (use-package lsp-ui
   :commands lsp-ui-mode
-  :config
+  ;; :config
   ;; (lsp-ui-doc-enable)
   )
+
 (use-package company-lsp :commands company-lsp)

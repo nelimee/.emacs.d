@@ -14,10 +14,11 @@
            :empty-lines 1)
           )
         )
-  
+  (setq org-startup-truncated nil)
   :bind (("C-c c" . org-capture)
          ("C-c l" . org-store-link)
-         )
+         ("C-c a" . org-agenda))
+  :hook (org-mode . auto-fill-mode)
   )
 
 (use-package ox-hugo
@@ -54,6 +55,7 @@ See `org-capture-templates' for more information."
                  ;; It is assumed that below file is present in `org-directory'
                  ;; and that it has a "Quantum Computing" heading. It can even be a
                  ;; symlink pointing to the actual location of all-posts.org!
-                 (file+olp "~/personnel/blog/content-org/all-posts.org" "Quantum Computing")
-                 (function org-hugo-new-subtree-post-capture-template))))
+                 (file+olp "~/personnel/personal-website/content-org/all-posts.org" "Quantum Computing")
+                 (function org-hugo-new-subtree-post-capture-template)))
+  )
 
